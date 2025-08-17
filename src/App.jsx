@@ -39,7 +39,7 @@ export default function App() {
       </section>
 
       <footer className="p-6 text-center text-gray-500 bg-white">
-        © {new Date().getFullYear()} [Your Name] | Built with ❤️ for Web3
+        © {new Date().getFullYear()} [Joshua Uwaoma] | Built with ❤️ for Web3
       </footer>
     </div>
   );

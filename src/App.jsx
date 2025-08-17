@@ -1,46 +1,29 @@
 export default function App() {
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900">
-      <header className="p-6 shadow-md bg-white sticky top-0 z-10">
-        <h1 className="text-2xl font-bold">My Web3 Portfolio</h1>
-        <p className="text-gray-600">Aspiring Blockchain Developer</p>
-      </header>
+    <div className="min-h-screen bg-gradient-to-r from-gray-900 via-gray-800 to-black text-white flex flex-col items-center justify-center">
+      <h1 className="text-5xl font-extrabold mb-6 animate-pulse">🚀 My Web3 Portfolio</h1>
+      <p className="text-lg text-gray-300 mb-10">
+        Blockchain Developer | Smart Contracts | DApps
+      </p>
 
-      <section className="p-10 text-center bg-gradient-to-r from-purple-500 to-indigo-600 text-white">
-        <h2 className="text-4xl font-bold mb-4">Hello, I'm [Your Name]</h2>
-        <p className="text-lg max-w-2xl mx-auto">
-          I build decentralized applications (DApps), smart contracts, and explore the future of Web3.
-        </p>
-      </section>
-
-      <section className="p-10">
-        <h3 className="text-3xl font-bold mb-6 text-center">Featured Projects</h3>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="bg-white rounded-2xl shadow-md p-6">
-            <h4 className="text-xl font-semibold mb-2">ERC-20 Token</h4>
-            <p className="text-gray-600 mb-4">
-              A custom cryptocurrency built with Solidity and deployed on Ethereum testnet.
-            </p>
-            <a href="#" className="text-indigo-600 font-medium hover:underline">View Project</a>
-          </div>
-        </div>
-      </section>
-
-      <section className="p-10 bg-gray-100 text-center">
-        <h3 className="text-2xl font-bold mb-4">Let's Connect</h3>
-        <p className="text-gray-700 mb-4">
-          Interested in working together? Reach out to me on my socials.
-        </p>
-        <div className="flex justify-center space-x-6">
-          <a href="#" className="text-indigo-600 font-medium hover:underline">GitHub</a>
-          <a href="#" className="text-indigo-600 font-medium hover:underline">LinkedIn</a>
-          <a href="#" className="text-indigo-600 font-medium hover:underline">Twitter</a>
-        </div>
-      </section>
-
-      <footer className="p-6 text-center text-gray-500 bg-white">
-        © {new Date().getFullYear()} [Joshua Uwaoma] | Built with ❤️ for Web3
-      </footer>
+      <div className="flex gap-6">
+        <a
+          href="https://github.com/yourusername"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all"
+        >
+          GitHub
+        </a>
+        <a
+          href="https://linkedin.com/in/yourusername"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all"
+        >
+          LinkedIn
+        </a>
+      </div>
     </div>
   );
 }

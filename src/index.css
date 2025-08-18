@@ -2,3 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Back to Top button styling */
+.back-to-top {
+  @apply fixed bottom-5 right-5 bg-blue-600 text-white p-3 rounded-full shadow-lg transition-opacity duration-300;
+}
+
+.back-to-top:hover {
+  @apply bg-blue-700;
+}

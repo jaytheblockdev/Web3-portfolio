@@ -2,29 +2,55 @@ import React, { useState, useEffect } from "react";
 import { FaArrowUp } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 
-function App() {
+// Hero Section
+function Hero() {
+  return (
+    <section className="relative h-[120vh] flex flex-col justify-center items-center text-center text-white">
+      {/* Background image with reduced blur */}
+      <img
+        src="/profile-bg.jpeg"
+        alt="Joshua Uwaoma"
+        className="absolute w-full h-full object-cover blur-[1px] -z-10"
+      />
+
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/20 -z-10"></div>
+
+      {/* Hero content */}
+      <h1 className="text-7xl font-bold drop-shadow-lg">Joshua Uwaoma</h1>
+      <p className="mt-4 text-2xl drop-shadow-md">
+        Blockchain Developer • Web3 Enthusiast • Smart Contracts
+      </p>
+
+      {/* Call to action buttons */}
+      <div className="mt-8 flex gap-6">
+        <button className="bg-indigo-600 hover:bg-indigo-700 px-8 py-4 rounded-2xl font-medium shadow-md transition">
+          View My Work
+        </button>
+        <button className="border border-white px-8 py-4 rounded-2xl font-medium hover:bg-white hover:text-black transition">
+          Contact
+        </button>
+      </div>
+    </section>
+  );
+}
+
+// Main App
+export default function App() {
   const [showButton, setShowButton] = useState(false);
 
   // Detect scroll
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 300) {
-        setShowButton(true);
-      } else {
-        setShowButton(false);
-      }
+      setShowButton(window.scrollY > 300);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   // Scroll to top
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -45,65 +71,15 @@ function App() {
         </nav>
       </header>
 
-     {/* Hero */}
-<section
-  id="home"
-  className="scroll-mt-24 min-h-[100vh] flex items-center relative"
-  style={{
-    backgroundImage: "url('/my-photo.jpg')", // make sure your file is in /public
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    filter: "blur(4px)", // reduced blur (was 8px before)
-  }}
->
-  {/* Overlay to darken slightly for readability */}
-  <div className="absolute inset-0 bg-black/40"></div>
-
-  <div className="relative max-w-6xl mx-auto px-6 z-10">
-    <motion.h1
-      className="text-4xl md:text-6xl font-extrabold text-indigo-400"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-    >
-      Joshua Uwaoma
-    </motion.h1>
-    <motion.p
-      className="mt-4 text-lg md:text-xl text-gray-300 max-w-2xl"
-      initial={{ opacity: 0, y: 12 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: 0.1 }}
-    >
-      Blockchain Developer • Web3 Enthusiast • Smart Contracts
-    </motion.p>
-    <div className="mt-8 flex gap-4">
-      <a
-        href="#projects"
-        className="bg-indigo-500 hover:bg-indigo-600 px-6 py-3 rounded-lg font-medium"
-      >
-        View My Work
-      </a>
-      <a
-        href="#contact"
-        className="border border-indigo-500 hover:bg-indigo-500/10 px-6 py-3 rounded-lg font-medium"
-      >
-        Contact
-      </a>
-    </div>
-  </div>
-</section>
-
+      {/* Hero Section */}
+      <Hero />
 
       {/* About */}
       <section id="about" className="scroll-mt-24 py-20">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-4 text-indigo-300">About Me</h2>
           <p className="text-gray-300 leading-relaxed text-lg">
-            I’m an experienced Web3 developer passionate about building decentralized applications and
-            Solidity smart contracts that push the boundaries of blockchain technology. 
-          I specialize in smart contract development, DeFi protocols, and exploring how blockchain can
-          create open, borderless financial systems. I care about clean architecture, secure code,
-            and creating on-chain products that are actually useful.
+            I’m an experienced Web3 developer passionate about building decentralized applications...
           </p>
         </div>
       </section>
@@ -114,19 +90,10 @@ function App() {
           <h2 className="text-3xl font-bold mb-8 text-center text-indigo-300">Skills</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
             {[
-              "Solidity",
-              "Hardhat",
-              "Ethers.js",
-              "Web3.js",
-              "React",
-              "Node.js",
-              "TailwindCSS",
-              "Git/GitHub",
+              "Solidity", "Hardhat", "Ethers.js", "Web3.js",
+              "React", "Node.js", "TailwindCSS", "Git/GitHub"
             ].map((skill) => (
-              <div
-                key={skill}
-                className="bg-gray-700/70 px-4 py-6 rounded-xl text-center hover:bg-gray-700 transition"
-              >
+              <div key={skill} className="bg-gray-700/70 px-4 py-6 rounded-xl text-center hover:bg-gray-700 transition">
                 {skill}
               </div>
             ))}
@@ -140,21 +107,14 @@ function App() {
           <h2 className="text-3xl font-bold mb-8 text-center text-indigo-300">Projects</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {[1, 2].map((n) => (
-              <div
-                key={n}
-                className="bg-gray-800 p-6 rounded-xl border border-white/10"
-              >
+              <div key={n} className="bg-gray-800 p-6 rounded-xl border border-white/10">
                 <h3 className="text-xl font-semibold mb-2">Project {n}</h3>
                 <p className="text-gray-400 mb-4">
                   Coming soon — this is where your smart contract & DApp case studies will go.
                 </p>
                 <div className="flex gap-4">
-                  <a href="#" className="text-indigo-400 hover:underline">
-                    GitHub
-                  </a>
-                  <a href="#" className="text-indigo-400 hover:underline">
-                    Live Demo
-                  </a>
+                  <a href="#" className="text-indigo-400 hover:underline">GitHub</a>
+                  <a href="#" className="text-indigo-400 hover:underline">Live Demo</a>
                 </div>
               </div>
             ))}
@@ -168,12 +128,8 @@ function App() {
           <h2 className="text-3xl font-bold mb-4 text-indigo-300">Got an Idea? Let’s Ship It 🚀</h2>
           <p className="text-gray-300 mb-6">
             Whether you’re building the next dApp, smart contract, or Web3 platform, I’d love to collaborate.
-Let’s turn your vision into reality.
           </p>
-          <a
-            href="mailto:your.email@example.com"
-            className="bg-indigo-500 hover:bg-indigo-600 px-6 py-3 rounded-lg font-medium"
-          >
+          <a href="mailto:your.email@example.com" className="bg-indigo-500 hover:bg-indigo-600 px-6 py-3 rounded-lg font-medium">
             Email Me
           </a>
         </div>
@@ -202,5 +158,3 @@ Let’s turn your vision into reality.
     </div>
   );
 }
-
-export default App;

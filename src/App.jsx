@@ -45,20 +45,21 @@ function App() {
         </nav>
       </header>
 
-      {/* Hero */}
+     {/* Hero */}
 <section
   id="home"
-  className="relative scroll-mt-24 min-h-[80vh] flex items-center overflow-hidden"
+  className="scroll-mt-24 min-h-[100vh] flex items-center relative"
+  style={{
+    backgroundImage: "url('/my-photo.jpg')", // make sure your file is in /public
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    filter: "blur(4px)", // reduced blur (was 8px before)
+  }}
 >
-  {/* Blurred background image */}
-  <div
-    className="absolute inset-0 bg-center bg-cover"
-    style={{ backgroundImage: "url('profile-bg.jpeg')" }} // 👈 replace with your actual photo path
-  ></div>
-  <div className="absolute inset-0 backdrop-blur-md bg-black/40"></div>
+  {/* Overlay to darken slightly for readability */}
+  <div className="absolute inset-0 bg-black/40"></div>
 
-  {/* Content */}
-  <div className="relative z-10 max-w-6xl mx-auto px-6">
+  <div className="relative max-w-6xl mx-auto px-6 z-10">
     <motion.h1
       className="text-4xl md:text-6xl font-extrabold text-indigo-400"
       initial={{ opacity: 0, y: 20 }}
@@ -68,7 +69,7 @@ function App() {
       Joshua Uwaoma
     </motion.h1>
     <motion.p
-      className="mt-4 text-lg md:text-xl text-gray-200 max-w-2xl"
+      className="mt-4 text-lg md:text-xl text-gray-300 max-w-2xl"
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.1 }}
@@ -91,6 +92,7 @@ function App() {
     </div>
   </div>
 </section>
+
 
       {/* About */}
       <section id="about" className="scroll-mt-24 py-20">

@@ -46,40 +46,51 @@ function App() {
       </header>
 
       {/* Hero */}
-      <section id="home" className="scroll-mt-24 min-h-[80vh] flex items-center">
-        <div className="max-w-6xl mx-auto px-6">
-          <motion.h1
-            className="text-4xl md:text-6xl font-extrabold text-indigo-400"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            Joshua Uwaoma
-          </motion.h1>
-          <motion.p
-            className="mt-4 text-lg md:text-xl text-gray-300 max-w-2xl"
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
-            Blockchain Developer • Web3 Enthusiast • Smart Contracts
-          </motion.p>
-          <div className="mt-8 flex gap-4">
-            <a
-              href="#projects"
-              className="bg-indigo-500 hover:bg-indigo-600 px-6 py-3 rounded-lg font-medium"
-            >
-              View My Work
-            </a>
-            <a
-              href="#contact"
-              className="border border-indigo-500 hover:bg-indigo-500/10 px-6 py-3 rounded-lg font-medium"
-            >
-              Contact
-            </a>
-          </div>
-        </div>
-      </section>
+<section
+  id="home"
+  className="relative scroll-mt-24 min-h-[80vh] flex items-center overflow-hidden"
+>
+  {/* Blurred background image */}
+  <div
+    className="absolute inset-0 bg-center bg-cover"
+    style={{ backgroundImage: "url('profile-bg.jpg')" }} // 👈 replace with your actual photo path
+  ></div>
+  <div className="absolute inset-0 backdrop-blur-md bg-black/40"></div>
+
+  {/* Content */}
+  <div className="relative z-10 max-w-6xl mx-auto px-6">
+    <motion.h1
+      className="text-4xl md:text-6xl font-extrabold text-indigo-400"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+    >
+      Joshua Uwaoma
+    </motion.h1>
+    <motion.p
+      className="mt-4 text-lg md:text-xl text-gray-200 max-w-2xl"
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: 0.1 }}
+    >
+      Blockchain Developer • Web3 Enthusiast • Smart Contracts
+    </motion.p>
+    <div className="mt-8 flex gap-4">
+      <a
+        href="#projects"
+        className="bg-indigo-500 hover:bg-indigo-600 px-6 py-3 rounded-lg font-medium"
+      >
+        View My Work
+      </a>
+      <a
+        href="#contact"
+        className="border border-indigo-500 hover:bg-indigo-500/10 px-6 py-3 rounded-lg font-medium"
+      >
+        Contact
+      </a>
+    </div>
+  </div>
+</section>
 
       {/* About */}
       <section id="about" className="scroll-mt-24 py-20">

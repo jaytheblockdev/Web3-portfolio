@@ -53,7 +53,7 @@ function App() {
   {/* Blurred background image */}
   <div
     className="absolute inset-0 bg-center bg-cover"
-    style={{ backgroundImage: "url('profile-bg.jpg')" }} // 👈 replace with your actual photo path
+    style={{ backgroundImage: "url('profile-bg.jpeg')" }} // 👈 replace with your actual photo path
   ></div>
   <div className="absolute inset-0 backdrop-blur-md bg-black/40"></div>
 

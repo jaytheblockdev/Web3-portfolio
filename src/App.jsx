@@ -152,9 +152,10 @@ function App() {
       {/* Contact */}
       <section id="contact" className="scroll-mt-24 py-20 bg-gray-800">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold mb-4 text-indigo-300">Get In Touch</h2>
+          <h2 className="text-3xl font-bold mb-4 text-indigo-300">Got an Idea? Let’s Ship It 🚀</h2>
           <p className="text-gray-300 mb-6">
-            Want to collaborate or hire me? I’m open to roles and freelance work.
+            Whether you’re building the next dApp, smart contract, or Web3 platform, I’d love to collaborate.
+Let’s turn your vision into reality.
           </p>
           <a
             href="mailto:your.email@example.com"

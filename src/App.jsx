@@ -26,14 +26,22 @@ function Hero() {
         Blockchain Developer • Web3 Enthusiast • Smart Contracts
       </p>
 
-      <div className="mt-8 flex gap-6 relative z-10">
-        <button className="bg-indigo-600 hover:bg-indigo-700 px-8 py-4 rounded-2xl font-medium shadow-md transition">
-          View My Work
-        </button>
-        <button className="border border-white px-8 py-4 rounded-2xl font-medium hover:bg-white hover:text-black transition">
-          Contact
-        </button>
-      </div>
+<div className="mt-8 flex gap-6">
+  <a
+    href="#projects"
+    className="bg-indigo-600 hover:bg-indigo-700 px-8 py-4 rounded-2xl font-medium shadow-md transition"
+  >
+    View My Work
+  </a>
+
+  <a
+    href="#contact"
+    className="border border-white px-8 py-4 rounded-2xl font-medium hover:bg-white hover:text-black transition"
+  >
+    Contact
+  </a>
+</div>
+
     </section>
   );
 }

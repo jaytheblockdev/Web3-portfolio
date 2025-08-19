@@ -79,7 +79,7 @@ export default function App() {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-4 text-indigo-300">About Me</h2>
           <p className="text-gray-300 leading-relaxed text-lg">
-            I’m an experienced Web3 developer passionate about building decentralized applications...
+            I’m an experienced Web3 developer passionate about building decentralized applications and Solidity smart contracts that push the boundaries of blockchain technology. I specialize in smart contract development, DeFi protocols, and exploring how blockchain can create open, borderless financial systems. I care about clean architecture, secure code, and creating on-chain products that are actually useful.
           </p>
         </div>
       </section>

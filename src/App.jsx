@@ -9,10 +9,10 @@ function Hero() {
       id="home"
       className="relative h-[120vh] flex flex-col justify-center items-center text-center text-white"
     >
-      {/* Background image with reduced blur */}
+      {/* Background image */}
       <div className="absolute inset-0 -z-10">
         <img
-          src={`${process.env.PUBLIC_URL || ""}/profile-bg.jpeg`}
+          src="/profile-bg.jpeg"   // ✅ direct public folder reference
           alt="Joshua Uwaoma"
           className="w-full h-full object-cover blur-[1px]"
         />
@@ -38,6 +38,7 @@ function Hero() {
     </section>
   );
 }
+
 
 // Main App
 export default function App() {

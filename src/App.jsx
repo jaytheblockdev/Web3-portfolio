@@ -2,32 +2,31 @@ import React, { useState, useEffect } from "react";
 import { FaArrowUp } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 
-// Hero Section
 function Hero() {
   return (
     <section
       id="home"
       className="relative h-[120vh] flex flex-col justify-center items-center text-center text-white"
     >
-      {/* Background image */}
-      <div className="absolute inset-0 -z-10">
+      {/* Background image with overlay */}
+      <div className="absolute inset-0">
         <img
-          src="/profile-bg.jpeg"   // ✅ direct public folder reference
+          src="/profile-bg.jpeg"
           alt="Joshua Uwaoma"
           className="w-full h-full object-cover blur-[1px]"
         />
-        {/* Overlay tint */}
-        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
       </div>
 
       {/* Hero content */}
-      <h1 className="text-7xl font-bold drop-shadow-lg">Joshua Uwaoma</h1>
-      <p className="mt-4 text-2xl drop-shadow-md">
+      <h1 className="text-7xl font-bold drop-shadow-lg relative z-10">
+        Joshua Uwaoma
+      </h1>
+      <p className="mt-4 text-2xl drop-shadow-md relative z-10">
         Blockchain Developer • Web3 Enthusiast • Smart Contracts
       </p>
 
-      {/* Call to action buttons */}
-      <div className="mt-8 flex gap-6">
+      <div className="mt-8 flex gap-6 relative z-10">
         <button className="bg-indigo-600 hover:bg-indigo-700 px-8 py-4 rounded-2xl font-medium shadow-md transition">
           View My Work
         </button>

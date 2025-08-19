@@ -140,7 +140,7 @@ export default function App() {
           <p className="text-gray-300 mb-6">
             Whether you’re building the next dApp, smart contract, or Web3 platform, I’d love to collaborate.
           </p>
-          <a href="mailto:your.email@example.com" className="bg-indigo-500 hover:bg-indigo-600 px-6 py-3 rounded-lg font-medium">
+          <a href="mailto:jayuwaoma@gmail.com" className="bg-indigo-500 hover:bg-indigo-600 px-6 py-3 rounded-lg font-medium">
             Email Me
           </a>
         </div>

@@ -5,16 +5,20 @@ import { motion, AnimatePresence } from "framer-motion";
 // Hero Section
 function Hero() {
   return (
-    <section className="relative h-[120vh] flex flex-col justify-center items-center text-center text-white">
+    <section
+      id="home"
+      className="relative h-[120vh] flex flex-col justify-center items-center text-center text-white"
+    >
       {/* Background image with reduced blur */}
-      <img
-        src="/profile-bg.jpeg"
-        alt="Joshua Uwaoma"
-        className="absolute w-full h-full object-cover blur-[1px] -z-10"
-      />
-
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/20 -z-10"></div>
+      <div className="absolute inset-0 -z-10">
+        <img
+          src={`${process.env.PUBLIC_URL || ""}/profile-bg.jpeg`}
+          alt="Joshua Uwaoma"
+          className="w-full h-full object-cover blur-[1px]"
+        />
+        {/* Overlay tint */}
+        <div className="absolute inset-0 bg-black/20"></div>
+      </div>
 
       {/* Hero content */}
       <h1 className="text-7xl font-bold drop-shadow-lg">Joshua Uwaoma</h1>

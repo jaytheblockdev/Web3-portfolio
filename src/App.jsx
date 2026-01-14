@@ -23,7 +23,7 @@ function Hero() {
         Joshua Uwaoma
       </h1>
       <p className="mt-4 text-2xl drop-shadow-md relative z-10">
-        Blockchain Developer • Web3 Enthusiast • Smart Contracts
+        Full-Stack Developer • Building Scalable Web Applications
       </p>
 
 <div className="mt-8 flex gap-6 relative z-10">
@@ -90,8 +90,9 @@ export default function App() {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-4 text-indigo-300">About Me</h2>
           <p className="text-gray-300 leading-relaxed text-lg">
-            I’m an experienced Web3 developer with proven expertise in building decentralized applications and Solidity smart contracts that push the boundaries of blockchain technology. I specialize in smart contract development, DeFi protocols, and exploring how blockchain can create open, borderless financial systems. I care about clean architecture, secure code, and creating on-chain products that are actually useful.
-          </p>
+            I’m a Full-Stack Developer experienced in building modern, scalable web applications from end to end. I work across front-end and back-end systems, focusing on clean architecture, performance, and maintainable code.
+
+I enjoy turning ideas into reliable products, collaborating across teams, and continuously improving how systems are designed, built, and shipped.
         </div>
       </section>
 
@@ -101,7 +102,7 @@ export default function App() {
           <h2 className="text-3xl font-bold mb-8 text-center text-indigo-300">Skills</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
             {[
-              "Solidity", "Hardhat", "Ethers.js", "Web3.js",
+              "Front-End", "Back-End", "APIs", "Application Architecture",
               "React", "Node.js", "TailwindCSS", "Git/GitHub"
             ].map((skill) => (
               <div key={skill} className="bg-gray-700/70 px-4 py-6 rounded-xl text-center hover:bg-gray-700 transition">
@@ -121,7 +122,7 @@ export default function App() {
               <div key={n} className="bg-gray-800 p-6 rounded-xl border border-white/10">
                 <h3 className="text-xl font-semibold mb-2">Project {n}</h3>
                 <p className="text-gray-400 mb-4">
-                  Coming soon — this is where your smart contract & DApp case studies will go.
+                  A collection of full-stack projects showcasing real-world application development, clean UI design, and robust back-end logic.
                 </p>
                 <div className="flex gap-4">
                   <a href="#" className="text-indigo-400 hover:underline">GitHub</a>
@@ -138,7 +139,7 @@ export default function App() {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-4 text-indigo-300">Got an Idea? Let’s Ship It 🚀</h2>
           <p className="text-gray-300 mb-6">
-            Whether you’re building the next dApp, smart contract, or Web3 platform, I’d love to collaborate.
+            I’m open to full-time roles, freelance work, and collaborations. If you’re looking for a reliable Full-Stack Developer who can take ownership of features and ship quality software, let’s talk.
           </p>
           <a href="mailto:jayuwaoma@gmail.com" className="bg-indigo-500 hover:bg-indigo-600 px-6 py-3 rounded-lg font-medium">
             Email Me
@@ -148,7 +149,7 @@ export default function App() {
 
       {/* Footer */}
       <footer className="py-6 text-center text-gray-500 border-t border-white/10">
-        © {new Date().getFullYear()} Joshua Uwaoma
+        © {new Date().getFullYear()} Joshua Uwaoma - Full Stack Developer
       </footer>
 
       {/* Back to Top Button */}

@@ -93,7 +93,8 @@ export default function App() {
             I’m a Full-Stack Developer experienced in building modern, scalable web applications from end to end. I work across front-end and back-end systems, focusing on clean architecture, performance, and maintainable code.
 
 I enjoy turning ideas into reliable products, collaborating across teams, and continuously improving how systems are designed, built, and shipped.
-        </div>
+          </p>
+          </div>
       </section>
 
       {/* Skills */}
